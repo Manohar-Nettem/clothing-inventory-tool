@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="col-sm-4 p-3 mt-3 border" style="margin: auto;">
+        <form (submit)="create(f)" #f="ngForm" ngNativeValidate>
+            <div >
+                <label>Name</label>
+                <input type="text" class="form-control"
+                placeholder="name" ngModel name="name" required/>
+            </div>
+            <div >
+                <label>Model</label>
+                <input type="text" class="form-control" placeholder="model" ngModel name="model"  required/>
+            </div>
+            <div>
+                <label>Fabric</label>
+                <input type="text" class="form-control" placeholder="fabric" ngModel name="fabric" required/>
+            </div>
+            <div >
+                <label>Price</label>
+                <input type="number" class="form-control" placeholder="price" ngModel name="price" required/>
+            </div>
+            <div>
+                <label>Manufacturer</label>
+                <input type="text" class="form-control" placeholder="manufacturer" ngModel name="manufacturer" required/>
+            </div>
+            <div class="form-group">
+                <label>Date of manufacture</label>
+                <input type="date" class="form-control" placeholder="date of manufacture" ngModel name="dateOfManufacture" required/>
+            </div>
+            <br>
+            <button type ="submit" class="btn btn-success btn-block" [disabled]="f.invalid">Create Product</button>
+    
+        </form>
+    </div>
+</div>

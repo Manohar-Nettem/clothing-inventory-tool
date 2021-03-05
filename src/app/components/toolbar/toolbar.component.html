@@ -1,0 +1,28 @@
+<header>
+<div class="row">
+    <div class="col-sm-4 pl-5">
+        <span class="title">
+            Clothing Inventory
+        </span>
+    </div>
+    <div class="col-sm-4 center-center">
+        <div class="center-center">
+            <input type="text" [(ngModel)]="searchText" >
+            <button class="search-button border" (click)="search()">
+              <mat-icon>search</mat-icon>
+            </button>
+          </div>
+    </div>
+    <div class="col-sm-4 center-center">
+        <ul class="nav center-center">
+            <li class="nav-item pr-3">
+                <a [routerLink]="['/products']" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }" class="text-success">Products</a>
+            </li>
+            <li class="nav-item pr-3">
+                <a  [routerLink]="['/create']" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }" class="text-success">Create Product</a>
+            </li>
+        </ul>
+    </div>
+</div>    
+</header>
+
